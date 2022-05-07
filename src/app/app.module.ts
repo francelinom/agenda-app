@@ -1,3 +1,4 @@
+import { ContatoService } from './contato.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,7 +17,7 @@ import { ContatoComponent } from './contato/contato.component';
     BrowserAnimationsModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [ContatoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
