@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
+import { ContatoComponent } from './contato/contato.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ContatoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
