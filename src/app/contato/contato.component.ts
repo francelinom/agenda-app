@@ -1,6 +1,7 @@
 import { ContatoService } from './../contato.service';
 import { Component, OnInit } from '@angular/core';
 import { Contato } from './contato';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contato',
@@ -8,22 +9,29 @@ import { Contato } from './contato';
   styleUrls: ['./contato.component.css'],
 })
 export class ContatoComponent implements OnInit {
-  constructor(private contatoService: ContatoService) {}
+  formulario!: FormGroup;
+  constructor(
+    private contatoService: ContatoService,
+    private fb: FormBuilder
+  ) {}
 
   ngOnInit(): void {
-    const contato: Contato = new Contato();
-    contato.nome = 'Francelino Silva';
-    contato.email = 'francelino.silva@gmail.com';
-    contato.favorito = false;
+    this.formulario = this.fb.group({
+      nome: ['', Validators.required],
+      email: ['', Validators.email],
+    });
+  }
 
-    this.contatoService.save(contato).subscribe(
-      (success) => {
-        console.log('gravado com sucesso!');
-      },
-      (error) => {
-        console.log('error', error);
-      },
-      () => console.log('post completo!')
-    );
+  submit() {
+    console.log('formulário', this.formulario.value);
+    // this.contatoService.save(contato).subscribe(
+    //   (success) => {
+    //     console.log('gravado com sucesso!');
+    //   },
+    //   (error) => {
+    //     console.log('error', error);
+    //   },
+    //   () => console.log('post completo!')
+    // );
   }
 }
