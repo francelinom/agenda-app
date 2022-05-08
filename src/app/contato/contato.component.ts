@@ -18,7 +18,7 @@ export class ContatoComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = this.fb.group({
       nome: ['', Validators.required],
-      email: ['', Validators.email],
+      email: ['', [Validators.email, Validators.required]],
     });
   }
 
