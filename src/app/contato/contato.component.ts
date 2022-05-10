@@ -10,7 +10,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ContatoComponent implements OnInit {
   formulario!: FormGroup;
-  contatos: Contato[] = [];
+  contatos!: Contato[];
+  colunas = ['id', 'nome', 'email', 'favorito'];
 
   constructor(
     private contatoService: ContatoService,
@@ -18,9 +19,21 @@ export class ContatoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.montarForm();
+    this.listarContatos();
+  }
+
+  montarForm() {
     this.formulario = this.fb.group({
       nome: ['', Validators.required],
       email: ['', [Validators.email, Validators.required]],
+    });
+  }
+
+  listarContatos() {
+    this.contatoService.list().subscribe((resp) => {
+      this.contatos = resp;
+      console.log('this.contatos ', this.contatos);
     });
   }
 
