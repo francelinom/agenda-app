@@ -13,13 +13,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { ContatoComponent } from './contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContatoDetalheComponent } from './contato-detalhe/contato-detalhe.component';
 
 @NgModule({
-  declarations: [AppComponent, ContatoComponent],
+  declarations: [AppComponent, ContatoComponent, ContatoDetalheComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,6 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTabsModule,
     MatTableModule,
     MatCardModule,
+    MatDialogModule,
   ],
   providers: [ContatoService],
   bootstrap: [AppComponent],
