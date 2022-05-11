@@ -50,4 +50,10 @@ export class ContatoComponent implements OnInit {
       () => console.log('post completo!')
     );
   }
+
+  favoritar(contato: Contato) {
+    this.contatoService.favourite(contato).subscribe((resp) => {
+      contato.favorito = !contato.favorito;
+    });
+  }
 }
