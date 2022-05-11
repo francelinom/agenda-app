@@ -58,7 +58,7 @@ export class ContatoComponent implements OnInit {
     });
   }
 
-  uploadFoto(event: any, contato: Contato) {
+  uploadFoto(event: any, contato: any) {
     const files = event.target.files;
     if (files) {
       const foto = files[0];
