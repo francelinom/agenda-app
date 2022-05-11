@@ -14,6 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { ContatoComponent } from './contato/contato.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,6 +37,7 @@ import { ContatoDetalheComponent } from './contato-detalhe/contato-detalhe.compo
     MatTableModule,
     MatCardModule,
     MatDialogModule,
+    MatPaginatorModule,
   ],
   providers: [ContatoService],
   bootstrap: [AppComponent],

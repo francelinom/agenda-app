@@ -33,7 +33,7 @@ export class ContatoComponent implements OnInit {
     });
   }
 
-  listarContatos() {
+  listarContatos(pagina: any, tamanho: any) {
     this.contatoService.list().subscribe((resp) => {
       this.contatos = resp;
       console.log('this.contatos ', this.contatos);
