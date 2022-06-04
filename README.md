@@ -1,27 +1,79 @@
 # AgendaApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
+---
 
-## Development server
+## Indice
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [AgendaApp](#agendaapp)
+  - [Indice](#indice)
+  - [Sobre](#sobre)
+  - [Funcionalidade da Aplicação](#funcionalidade-da-aplicação)
+  - [Tecnologias utilizadas](#tecnologias-utilizadas)
+  - [Como baixar o projeto](#como-baixar-o-projeto)
+  - [Autor](#autor)
+  
+---
 
-## Code scaffolding
+## Sobre 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O Projeto **AgendaApp** foi desenvolvido para um CRUD com paginação e com possibilidade de salvar imagem ao perfil do usuário criado.
 
-## Build
+<span style="color: red">
+OBS: Projeto ainda está em desenvolvimento para finalizar algus detalhes de visualização e finalizar algumas funcionalidades.
+</span>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Funcionalidade da Aplicação
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+A aplicação exemplo consiste em criar:
+- Contatos com um formulário com validações de campos;
+- Lista de contatos criados;
+- Atualizar informações do contato
+- Remover contato
+- Anexar foto ao contato criado
 
-## Running end-to-end tests
+Telas examplos: 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<h1>
+  <img src="">
+  <img src="">
+  <img src="">
+  <img src="">
+</h1>
 
-## Further help
+---
+## Tecnologias utilizadas 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+O projeto foi desenvolvido utilizando as seguintes tecnologias
+- [Angular 12](https://angular.io/)
+- material UI
+- JavaScript
+- TypeScript
+- HTML
+- CSS
+
+---
+
+## Como baixar o projeto
+
+```bash
+# Clonar o repositório em sua máquina 
+$ git clone https://github.com/francelinom/AgendaApp.git
+
+# Entrar na pasta do projeto 
+$ cd AgendaApp
+
+# Instalar todas as dependências 
+$ npm i
+
+# Iniciar o projeto 
+$ ng serve
+```
+---
+## Autor
+
+Desenvolvido por **Francelino Marcílio da Silva** 
+<h1>
+  <img src="src/assets/image/eu.jpeg">
+</h1>
